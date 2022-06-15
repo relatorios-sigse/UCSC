@@ -1,0 +1,4 @@
+--Habilita el control de "Copia electrónica" en las categorías de normativa
+UPDATE DCCATEGORY SET FGENABLEREVKNOW = 1 WHERE CDCATEGORY IN
+(SELECT CDCATEGORY FROM DCCATEGORY WHERE IDCATEGORY IN (
+'3-DR 2020') )
